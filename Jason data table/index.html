@@ -1,0 +1,128 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table Example</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+   
+    <table id="dataTable" class="display" style="width:100%"></table>
+
+    <script>
+       
+       const jsonData = [
+  {
+    id: 1,
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    email: "john@example.com",
+    salary: 50000,
+  },
+  {
+    id: 2,
+    firstName: "Jane",
+    lastName: "Smith",
+    age: 25,
+    email: "jane@example.com",
+    salary: 60000,
+  },
+  {
+    id: 3,
+    firstName: "Bob",
+    lastName: "Johnson",
+    age: 35,
+    email: "bob@example.com",
+    salary: 70000,
+  },
+  {
+    id: 4,
+    firstName: "Mary",
+    lastName: "Williams",
+    age: 40,
+    email: "mary@example.com",
+    salary: 80000,
+  },
+  {
+    id: 5,
+    firstName: "Mike",
+    lastName: "Brown",
+    age: 45,
+    email: "mike@example.com",
+    salary: 90000,
+  },
+  {
+    id: 6,
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    email: "john@example.com",
+    salary: 50000,
+  },
+  {
+    id: 7,
+    firstName: "Jane",
+    lastName: "Smith",
+    age: 25,
+    email: "jane@example.com",
+    salary: 60000,
+  },
+  {
+    id: 8,
+    firstName: "Bob",
+    lastName: "Johnson",
+    age: 35,
+    email: "bob@example.com",
+    salary: 70000,
+  },
+  {
+    id: 9,
+    firstName: "Mary",
+    lastName: "Williams",
+    age: 40,
+    email: "mary@example.com",
+    salary: 80000,
+  },
+  {
+    id: 10,
+    firstName: "Mike",
+    lastName: "Brown",
+    age: 45,
+    email: "mike@example.com",
+    salary: 90000,
+  },
+];
+
+
+$(document).ready(function () {
+        $('#dataTable').DataTable({
+            data: jsonData,
+            columns: [
+                { data: 'id', title: 'ID' },
+                { data: 'firstName', title: 'First Name' },
+                { data: 'lastName', title: 'Last Name' },
+                { data: 'age', title: 'Age' },
+                { data: 'email', title: 'Email' },
+                { data: 'salary', title: 'Salary' }
+            ],
+            paging: true,
+            pageLength: 5, 
+            lengthMenu: [5, 10, 25, 50],
+            scrollY: '200px', 
+            scrollCollapse: true, 
+            searching: true, 
+            info: false 
+        });
+    });
+    </script>
+</body>
+</html>
